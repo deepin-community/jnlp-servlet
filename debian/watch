@@ -1,0 +1,5 @@
+#Nothing to watch yet because upstream does not tag the releases
+#version=3
+#opts=dversionmangle=s/(\da?)[\+\.\-~](?:dfsg|debian|ds|repack|repacked)\.?\d*$/$1/ \
+#https://github.com/psndcsrv/jnlp-servlet/tags \
+#.*/archive/(?:upstream/)?(?:v||version-|release-|X|R|r)(\d\S*)\.tar\.gz

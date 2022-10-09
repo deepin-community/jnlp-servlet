@@ -1,0 +1,33 @@
+jnlp-servlet (20120126-4) unstable; urgency=medium
+
+  * Team upload.
+  * Switch to compat level 10.
+  * Declare compliance with Debian Policy 4.1.1.
+  * Use canonical VCS URL.
+  * Add java9.patch and support Java 9.
+    Thanks to Chris West for the report. (Closes: #873984)
+  * Build with --no-parallel to avoid a race condition.
+
+ -- Markus Koschany <apo@debian.org>  Thu, 26 Oct 2017 19:01:35 +0200
+
+jnlp-servlet (20120126-3) unstable; urgency=medium
+
+  * Team upload.
+  * Build against libservlet3.1-java
+  * Standards-Version updated to 3.9.6 (no changes)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 31 Mar 2015 12:51:43 +0200
+
+jnlp-servlet (20120126-2) unstable; urgency=low
+
+  * Rename jardiff.jar to jnlp-jardiff.jar to avoid conflict with
+    jardiff package (Closes: #723606)
+  * Build against libservlet3.0-java.
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Tue, 17 Sep 2013 18:06:11 -0400
+
+jnlp-servlet (20120126-1) unstable; urgency=low
+
+  * Initial release. (Closes: #720101)
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Sun, 18 Aug 2013 16:47:45 +0100

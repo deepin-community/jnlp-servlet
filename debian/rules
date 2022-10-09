@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+export JAVA_HOME=/usr/lib/jvm/default-java
+
+# Put depended upon jars in here
+export CLASSPATH=/usr/share/java/servlet-api-3.1.jar
+
+%:
+	dh $@ --no-parallel --with javahelper --with jh_maven_repo_helper
+

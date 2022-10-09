@@ -1,0 +1,23 @@
+From: Markus Koschany <apo@debian.org>
+Date: Thu, 26 Oct 2017 19:00:50 +0200
+Subject: java9
+
+Bug-Debian: https://bugs.debian.org/873984
+Forwarded: no
+---
+ GNUmakefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/GNUmakefile b/GNUmakefile
+index 2c99898..74b002e 100644
+--- a/GNUmakefile
++++ b/GNUmakefile
+@@ -7,7 +7,7 @@ TMPDIR = .
+ # environment variable TMPDIR should point to tmp directory 
+ # environment variable SDK_HOME should point to SDK directory
+ SDK_HOME = $(JAVA_HOME)
+-JAVAC		= $(SDK_HOME)/bin/javac -source 1.5 -target 1.5
++JAVAC		= $(SDK_HOME)/bin/javac -source 1.8 -target 1.8
+ JAR		= $(SDK_HOME)/bin/jar
+ CLASSDESTDIR	= classes
+ MKDIR		= mkdir -p

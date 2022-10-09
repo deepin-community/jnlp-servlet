@@ -1,0 +1,31 @@
+From: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Date: Thu, 26 Oct 2017 19:00:36 +0200
+Subject: build
+
+---
+ GNUmakefile | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/GNUmakefile b/GNUmakefile
+index 1138a4d..2c99898 100644
+--- a/GNUmakefile
++++ b/GNUmakefile
+@@ -2,7 +2,8 @@
+ # environment variable FILE_SEPARATOR variable for file separator (; on win32 and : on unix)
+ FILE_SEPARATOR = :
+ # environment variable CLASS_PATH should contain path to javaws.jar and servlet.jar
+-CLASS_PATH = $(JAVA_HOME)/lib/javaws.jar$(FILE_SEPARATOR)deplib/servlet-api.jar
++CLASS_PATH = $(JAVA_HOME)/lib/javaws.jar$(FILE_SEPARATOR)/usr/share/java/servlet-api-3.1.jar
++TMPDIR = .
+ # environment variable TMPDIR should point to tmp directory 
+ # environment variable SDK_HOME should point to SDK directory
+ SDK_HOME = $(JAVA_HOME)
+@@ -72,7 +73,7 @@ servlet-resource:
+ 
+ jardiff-jar:
+ 	$(ECHO) 'Main-Class:' jnlp.sample.jardiff.JarDiff > $(TMPDIR)/jardiff.manifest
+-	$(JAR) cvfm $(OUTPUT_DIR)/jardiff.jar $(TMPDIR)/jardiff.manifest -C $(CLASSDESTDIR) .
++	$(JAR) cvfm $(OUTPUT_DIR)/jnlp-jardiff.jar $(TMPDIR)/jardiff.manifest -C $(CLASSDESTDIR) .
+ 	$(RM) $(TMPDIR)/jardiff.manifest
+ 
+ servlet-jar:

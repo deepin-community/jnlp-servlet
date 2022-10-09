@@ -1,0 +1,2 @@
+debian/jnlp-servlet-pom.xml --usj-name=jnlp-servlet
+debian/jardiff-pom.xml --usj-name=jnlp-jardiff

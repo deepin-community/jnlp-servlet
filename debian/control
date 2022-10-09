@@ -1,0 +1,33 @@
+Source: jnlp-servlet
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Andrew Ross <ubuntu@rossfamily.co.uk>
+Build-Depends:
+ debhelper (>= 10),
+ javahelper,
+ maven-repo-helper
+Build-Depends-Indep:
+ default-jdk,
+ libservlet3.1-java
+Standards-Version: 4.1.1
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/jnlp-servlet.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-java/jnlp-servlet.git
+Homepage: https://github.com/psndcsrv/jnlp-servlet
+
+Package: libjnlp-servlet-java
+Architecture: all
+Depends:
+ ${java:Depends},
+ ${misc:Depends}
+Recommends:
+ ${java:Recommends}
+Description: simple and convenient packaging format for JNLP applications
+ JNLPDownloadServlet can be used to package a JNLP file and its associated
+ resources in a Web Archive (.war) file. The purpose of the servlet is to
+ provide a simple and convenient packaging format for JNLP applications, so
+ they can be easily deployed in a Web Container, such as Tomcat or a
+ J2EE-compliant Application Server.
+
+
